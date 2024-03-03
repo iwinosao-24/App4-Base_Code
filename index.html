@@ -1,3 +1,5 @@
+@@ -1,4 +1,4 @@
+@@ -1,54 +1,84 @@
 <!--@@ -1,54 +1,84 @@-->
 <!DOCTYPE html> 
 <html> 
@@ -22,7 +24,6 @@ The goal of this code is to be able to determine if the symptoms someone has ali
  
 Known Issues:
 Issues with this code are that the the results are out of 200 not 100. Additionally, the comments I made are also showing up on the webiste. 
-
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -34,20 +35,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
-
 <!--JavaScript section for counting responses and displaying results-->
 <script>
         var Endometriosis_count = 0;
 	var UTI_count = 0;
 	//setting up variable//
-
 	//function to calculate Endometriosis results//
         function EndometriosisAdd(){
             Endometriosis_count = Endometriosis_count + 1;
 		//alert(Endometriosis_count);
-
         }
-
 	//Function to calculate UTI count//
         function UTIAdd() {
             UTI_count = UTI_count + 1;
@@ -68,23 +65,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	}
  
-
 </script>
-
-
-
 <style>	
-	<style>
-       	img: url: https://health.usf.edu/-/media/Images/Medicine/Graduate-Affairs/womenshealth.ashx?h=422&w=997&hash=21A1C11E95CBB45473B4F2EBC43E7888
-            	max-height:90%;
-        		max-width:90%;
-        	}
-	</style>
-
 .body {
      margin: 0em;
 }
-
 .page {
     width: 100vw;
     height: 100vh;
@@ -95,7 +80,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
-
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>UTI or Endometriosis?</h1>
@@ -109,7 +98,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
 <div class="page" id="one"> <!--creating page initially-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -122,7 +110,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#two"  onclick="UTIAdd();" class="w3-btn w3-black">No</a>	
     	</div><!-- /content -->
 </div>
-
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -134,7 +121,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#three"  onclick="EndometriosisAdd();" class="w3-btn w3-black">No</a>
 	</div><!-- /content -->
 </div>	
-
 <div class="page" id="three"> <!--repeated code from page 2, changed numbers so user goes to page four and is not stuck on the same page-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -146,7 +132,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#four"  onclick="EndometriosisAdd(0);" class="w3-btn w3-black">Yes</a>
 	</div><!-- /content -->
 </div>	
-
 <div class="page" id="four"> <!--used code from page 1 because the key corresponds with EndometriosisAdd first unlike in page 2 and 3-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -158,7 +143,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#five"  onclick="UTIAdd();" class="w3-btn w3-black">Yes</a>	
     	</div><!-- /content -->
 </div>
-
 <div class="page" id="five"><!--used code from doc to caluclate results so it pulls forom code at the beginning with the variables-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -171,6 +155,5 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
 </body>
 </html>
