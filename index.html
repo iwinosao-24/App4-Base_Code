@@ -6,7 +6,7 @@
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
-Authors in chronological order of contribution:
+Authors in chronological order of contribUTIon:
 Tim Riedel
 Iwinosa Ojo
  
@@ -18,7 +18,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to be able to determine if the symptoms someone has aligns with that of allergies or a cold. 
+The goal of this code is to be able to determine if the symptoms someone has aligns with that of Endometriosis or a UTI. 
  
 Known Issues:
 Issues with this code are that the the results are out of 200 not 100. Additionally, the comments I made are also showing up on the webiste. 
@@ -35,36 +35,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-//JavaScript section for counting responses and displaying results//
+<!--JavaScript section for counting responses and displaying results-->
 <script>
-        var allergy_count = 0;
-	var cold_count = 0;
+        var Endometriosis_count = 0;
+	var UTI_count = 0;
 	//setting up variable//
 
-	//function to calculate allergy results//
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		//alert(allergy_count);
+	//function to calculate Endometriosis results//
+        function EndometriosisAdd(){
+            Endometriosis_count = Endometriosis_count + 1;
+		//alert(Endometriosis_count);
 
         }
 
-	//Function to calculate cold count//
-        function coldAdd() {
-            cold_count = cold_count + 1;
-        	//alert(cold_count)
+	//Function to calculate UTI count//
+        function UTIAdd() {
+            UTI_count = UTI_count + 1;
+        	//alert(UTI_count)
 	
 	}
 	
 	//diplsaying results//
-	//added variable part to make sure the allergy amd cold count are being identified/
+	//added variable part to make sure the Endometriosis amd UTI count are being identified/
   		function resultsPercent() {
-		var x = allergy_count;
-		var y = cold_count;
-		var allergyPercent = (x / 4) * 100; //calculates allergy percent by totaling cold count and divding it by the total number of questions which is four//
-		var coldPercent = (y / 4) * 100; //calculates allergy percent by totaling allergy count and divding it by the total number of questions which is four//
+		var x = Endometriosis_count;
+		var y = UTI_count;
+		var EndometriosisPercent = (x / 4) * 100; //calculates Endometriosis percent by totaling Endometriosis count and divding it by the total number of questions which is four//
+		var UTIPercent = (y / 4) * 100; //calculates UTI percent by totaling UTI count and divding it by the total number of questions which is four//
 	
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;  
+	resultText.innerHTML = "Probability it is Endometriosis =" + EndometriosisPercent + "<br> Probability it is a UTI =" + UTIPercent;  
 	
 	}
  
@@ -97,11 +97,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>UTI or Endometriosis?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have Endometriosis but wonder if it is a Urinary Tract Infection (UTI). Answer a few short questions to find out!</p>
 	
 		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -109,16 +109,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one"> //creating page initially//
+<div class="page" id="one"> <!--creating page initially-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container"> //button from doc//
+    	<div id="content" class="w3-container"> <!--button from doc-->
         <p>Do you experience pelvic pain that worsens during menstruation?</p>    
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> 
-		<--!creating choice buttons with function to take person to the next page while also calculating the results-->
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+		<a href="#two"  onclick="EndometriosisAdd();" class="w3-btn w3-black">Yes</a> 
+		<!--creating choice buttons with function to take person to the next page while also calculating the results-->
+         	<a href="#two"  onclick="UTIAdd();" class="w3-btn w3-black">No</a>	
     	</div><!-- /content -->
 </div>
 
@@ -129,36 +129,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Have you noticed a change in your urinary habits, such as increased urgency or discomfort during urination?</p>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> //had to switch the order of coldAdd and coldAllergy to correspond to the key in the doc//
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#three"  onclick="UTIAdd();" class="w3-btn w3-black">Yes</a> <!--had to switch the order of UTIAdd and UTIEndometriosis to correspond to the key in the doc-->
+         	<a href="#three"  onclick="EndometriosisAdd();" class="w3-btn w3-black">No</a>
 	</div><!-- /content -->
 </div>	
 
-<div class="page" id="three"> //repeated code from page 2, changed numbers so user goes to page four and is not stuck on the same page//
+<div class="page" id="three"> <!--repeated code from page 2, changed numbers so user goes to page four and is not stuck on the same page-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<p>Is sexual intercourse often associated with pain or discomfort?</p>
-		<a href="#four"  onclick="coldAdd(0);" class="w3-btn w3-black">Yes</a>
-         	<a href="#four"  onclick="allergyAdd(0);" class="w3-btn w3-black">No</a>
+		<a href="#four"  onclick="UTIAdd(0);" class="w3-btn w3-black">No</a>
+         	<a href="#four"  onclick="EndometriosisAdd(0);" class="w3-btn w3-black">Yes</a>
 	</div><!-- /content -->
 </div>	
 
-<div class="page" id="four"> //used code from page 1 because the key corresponds with allergyAdd first unlike in page 2 and 3//
+<div class="page" id="four"> <!--used code from page 1 because the key corresponds with EndometriosisAdd first unlike in page 2 and 3-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Do you have symptoms like fever or unusual urine odor?</p>    
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+		<a href="#five"  onclick="EndometriosisAdd();" class="w3-btn w3-black">No</a>
+         	<a href="#five"  onclick="UTIAdd();" class="w3-btn w3-black">Yes</a>	
     	</div><!-- /content -->
 </div>
 
-<div class="page" id="five">//used code from doc to caluclate results so it pulls forom code at the beginning with the variables//
+<div class="page" id="five"><!--used code from doc to caluclate results so it pulls forom code at the beginning with the variables-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 		<p id="results"></p>.  
